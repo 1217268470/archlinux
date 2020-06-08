@@ -1,8 +1,9 @@
-
-
 ```
 # ls /sys/firmware/efi/efivars
-# dhcpcd/wifi-menu
+#动态网址，接网线
+# dhcpcd
+#或者使用wifi
+# wifi-menu
 # ping -c 4 www.baidu.com
 ```
 
@@ -59,19 +60,14 @@
 # vim /etc/locale.gen
 	en_US.UTF-8 UTF-8
 # locale-gen
-```
-
-```
 # vim /etc/locale.conf
 	LANG=en_US.UTF-8
+# pacman -S ttf-dejavu wqy-microhei wqy-microhei-lite wqy-zenhei
 ```
 
 ```
 # vim /etc/hostname
 	myhostname
-```
-
-```
 # vim /etc/hosts
 	127.0.0.1	localhost
 	::1		localhost
@@ -80,29 +76,28 @@
 
 ```
 # useradd -m -g users -s /bin/bash 用户名 
+# passwd 用户名
 # nano /etc/sudoers
 	root ALL=(ALL)ALL
 	用户名 ALL=(ALL)ALL
-```
-
-```
 # passwd
 	设置root密码
 ```
 
 ```
-# pacman -S intl-ucode
-	intel处理器用户安装
+## 笔记本安装触摸板
+# pacman -S xf86-input-synaptics
+## intel处理器用户安装
+# pacman -S intel-ucode
+## 硬盘存在其他操作系统需安装
 # pacman -S os-prober
-	硬盘存在其他操作系统需安装
+## 安装grub efi启动管理工具
 # pacman -S grub efibootmgr
-	安装grub efi启动管理工具
 # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Archlinux
 # grub-mkconfig -o /boot/grub/grub.cfg
+## 笔记本安装上网工具
 # pacman -S iw wpa_supplicant dialog netctl
-	笔记本安装上网工具
 # systemctl enable dhcpcd
-# systemctl start dhcpcd
 # exit
 	退出chroot环境
 # umount -R /mnt
@@ -124,64 +119,25 @@
 
 ```
 # pacman -S xorg
-# pacman -S xf86-input-synaptics
-# pacman -S pacman -S ttf-dejavu wqy-microhei wqy-zenhei
+# pacman -S xfce4 xfce4-goodies
+# cp /etc/X11/xinit/xinitrc /home/用户名/.xinitrc
+# 将exec startxfce4添加到.xinitrc
+# pacman -S lightdm
+# pacman -S lightdm-gtk-greeter
+# pacman -S lightdm-gtk-greeter-settings 
+# nano /etc/lightdm/lightdm.conf
+	[Seat:*]
+	...
+	greeter-session=lightdm-yourgreeter-greeter
+# systemctl enable lightdm.service
 
 ```
 
 ```
-# loadkeys de-latin1
+# xx
 ```
 
 ```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
-```
-
-```
-# loadkeys de-latin1
+# xx
 ```
 
