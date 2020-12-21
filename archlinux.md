@@ -144,3 +144,27 @@
 
 ```
 
+	#应用
+	gnome-klotski 华容道
+	gnome-maps 地图
+	gnome-mines 扫雷
+	gnome-taquin 推箱子
+	gnome-sudoku 数独
+	gnome-nibbles 贪吃蛇
+	gnome-mahjongg 麻将
+	gnome-weather 天气
+	gnome-disk-utility 磁盘管理工具
+	gnome-system-monitor 系统监视器
+	pavucontrol 音量控制
+	pulseaudio
+	pulseaudio-alsa
+	pulseaudio-bluetooth
+	pulseaudio-equalizer
+	networkmanager
+	network-manager-applet 网络管理
+	file-roller 文件压缩管理器
+	android-file-transger
+	catfish
+	amule
+	hardinfo
+	
