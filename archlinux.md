@@ -167,4 +167,5 @@
 	catfish
 	amule
 	hardinfo
-	
+	mcmojave-circle-icon-theme-git 主题图标
+
